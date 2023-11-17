@@ -15,38 +15,21 @@ sync(store, router);
 
 async function start() {
     autoLogin();
-    // try {
-    //   if (loginPage) {
-    //     // await validateLogin();
-    //   } else {
-    //     await login("", "", "");
-    //   }
-    // } catch (e) {
-    //   console.log(e);
-    // }
-
-    // if (recaptcha) {
-    //   await new Promise((resolve) => {
-    //     const check = () => {
-    //       if (typeof window.grecaptcha === "undefined") {
-    //         setTimeout(check, 100);
-    //       } else {
-    //         resolve();
-    //       }
-    //     };
-
-    //     check();
-    //   });
-    // }
+    // new Vue({
+    //     el: "#app",
+    //     store,
+    //     router,
+    //     i18n,
+    //     template: "<App/>",
+    //     components: { App }
+    // });
 
     new Vue({
-        el: "#app",
         store,
         router,
         i18n,
-        template: "<App/>",
-        components: { App }
-    });
+        render: (h) => h(App),
+      }).$mount("#app");
 }
 
 start();

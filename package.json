@@ -1,16 +1,11 @@
 {
-    "name": "filebrowser-frontend",
-    "version": "1.0.0",
+    "name": "file-browser",
+    "version": "0.1.0",
     "private": true,
-    "type": "module",
     "scripts": {
-        "dev": "vite dev",
-        "serve": "vite serve",
-        "build": "vite build",
-        "watch": "vite build --watch",
-        "clean": "find ./dist -maxdepth 1 -mindepth 1 ! -name '.gitkeep' -exec rm -r {} +",
-        "lint": "eslint --ext .vue,.js src/",
-        "lint:fix": "eslint --ext .vue,.js --fix src/",
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
         "format": "prettier --write .",
         "json-server": "json-server -c json-server/config.json json-server/db.json"
     },
@@ -35,31 +30,22 @@
         "vue-async-computed": "^3.9.0",
         "vue-i18n": "^8.28.2",
         "vue-lazyload": "^1.3.5",
-        "vue-router": "^3.6.5",
+        "vue-router": "^3.5.1",
         "vue-simple-progress": "^1.1.1",
         "vuex": "^3.6.2",
         "vuex-router-sync": "^5.0.0",
         "whatwg-fetch": "^3.6.17"
     },
     "devDependencies": {
-        "@vitejs/plugin-legacy": "^4.1.1",
-        "@vitejs/plugin-vue2": "^2.2.0",
-        "@vue/eslint-config-prettier": "^8.0.0",
-        "autoprefixer": "^10.4.14",
-        "eslint": "^8.46.0",
-        "eslint-plugin-prettier": "^5.0.0",
-        "eslint-plugin-vue": "^9.16.1",
-        "jsdom": "^22.1.0",
-        "postcss": "^8.4.31",
-        "prettier": "^3.0.1",
-        "terser": "^5.19.2",
-        "vite": "^4.4.9",
-        "vite-plugin-compression2": "^0.10.3",
-        "vite-plugin-rewrite-all": "^1.0.1"
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not ie < 11"
-    ]
+        "@babel/core": "^7.12.16",
+        "@babel/eslint-parser": "^7.12.16",
+        "@vue/cli-plugin-babel": "~5.0.0",
+        "@vue/cli-plugin-router": "~5.0.0",
+        "@vue/cli-plugin-vuex": "~5.0.0",
+        "@vue/cli-service": "~5.0.0",
+        "prettier": "^2.4.1",
+        "sass": "^1.32.7",
+        "sass-loader": "^12.0.0",
+        "vue-template-compiler": "^2.6.14"
+    }
 }

@@ -1,96 +1,96 @@
 {
-    "login": {
-        "username": "demo",
-        "password": "demo",
-        "recaptcha": ""
-    },
-    "usage": {
-        "total": 10213466112,
-        "used": 4063965184
-    },
-    "usage_a": {
-        "total": 10213466112,
-        "used": 4064043008
-    },
-    "resources": {
-        "items": [
-            {
-                "path": "/a",
-                "name": "a",
-                "size": 4096,
-                "extension": "",
-                "modified": "2023-11-16T10:03:47.984832717Z",
-                "mode": 2147484141,
-                "isDir": true,
-                "isSymlink": false,
-                "type": ""
-            },
-            {
-                "path": "/forest.jpg",
-                "name": "forest.jpg",
-                "size": 175906,
-                "extension": ".jpg",
-                "modified": "2023-11-16T10:00:15.248218199Z",
-                "mode": 420,
-                "isDir": false,
-                "isSymlink": false,
-                "type": "image"
-            },
-            {
-                "path": "/sample.txt",
-                "name": "sample.txt",
-                "size": 2797,
-                "extension": ".txt",
-                "modified": "2023-11-16T10:00:15.248218199Z",
-                "mode": 420,
-                "isDir": false,
-                "isSymlink": false,
-                "type": "text"
-            },
-            {
-                "path": "/test.txt",
-                "name": "test.txt",
-                "size": 0,
-                "extension": ".txt",
-                "modified": "2023-11-16T10:12:26.018353662Z",
-                "mode": 493,
-                "isDir": false,
-                "isSymlink": false,
-                "type": "text"
-            }
-        ],
-        "numDirs": 1,
-        "numFiles": 3,
-        "sorting": {
-            "by": "name",
-            "asc": false
-        },
-        "path": "/",
-        "name": "srv",
-        "size": 4096,
-        "extension": "",
-        "modified": "2023-11-16T10:16:46.41110109Z",
-        "mode": 2147484141,
-        "isDir": true,
-        "isSymlink": false,
-        "type": ""
-    },
-    "resources_a": {
-        "items": [],
-        "numDirs": 0,
-        "numFiles": 0,
-        "sorting": {
-            "by": "name",
-            "asc": false
-        },
-        "path": "/a/",
+  "login": {
+    "username": "demo",
+    "password": "demo",
+    "recaptcha": ""
+  },
+  "usage": {
+    "total": 10213466112,
+    "used": 4063965184
+  },
+  "usage_a": {
+    "total": 10213466112,
+    "used": 4064043008
+  },
+  "resources": {
+    "items": [
+      {
+        "path": "/a",
         "name": "a",
         "size": 4096,
         "extension": "",
-        "modified": "2023-11-16T10:25:00.612499367Z",
+        "modified": "2023-11-16T10:03:47.984832717Z",
         "mode": 2147484141,
         "isDir": true,
         "isSymlink": false,
         "type": ""
-    }
+      },
+      {
+        "path": "/forest.jpg",
+        "name": "forest.jpg",
+        "size": 175906,
+        "extension": ".jpg",
+        "modified": "2023-11-16T10:00:15.248218199Z",
+        "mode": 420,
+        "isDir": false,
+        "isSymlink": false,
+        "type": "image"
+      },
+      {
+        "path": "/sample.txt",
+        "name": "sample.txt",
+        "size": 2797,
+        "extension": ".txt",
+        "modified": "2023-11-16T10:00:15.248218199Z",
+        "mode": 420,
+        "isDir": false,
+        "isSymlink": false,
+        "type": "text"
+      },
+      {
+        "path": "/test.txt",
+        "name": "test.txt",
+        "size": 0,
+        "extension": ".txt",
+        "modified": "2023-11-16T10:12:26.018353662Z",
+        "mode": 493,
+        "isDir": false,
+        "isSymlink": false,
+        "type": "text"
+      }
+    ],
+    "numDirs": 1,
+    "numFiles": 3,
+    "sorting": {
+      "by": "name",
+      "asc": false
+    },
+    "path": "/",
+    "name": "srv",
+    "size": 4096,
+    "extension": "",
+    "modified": "2023-11-16T10:16:46.41110109Z",
+    "mode": 2147484141,
+    "isDir": true,
+    "isSymlink": false,
+    "type": ""
+  },
+  "resources_a": {
+    "items": [],
+    "numDirs": 0,
+    "numFiles": 0,
+    "sorting": {
+      "by": "name",
+      "asc": false
+    },
+    "path": "/a/",
+    "name": "a",
+    "size": 4096,
+    "extension": "",
+    "modified": "2023-11-16T10:25:00.612499367Z",
+    "mode": 2147484141,
+    "isDir": true,
+    "isSymlink": false,
+    "type": ""
+  }
 }

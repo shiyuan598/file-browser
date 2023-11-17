@@ -1,19 +1,19 @@
-# filebrowser-frontend
+# file-browser
 
-### Getting Started
-
-Install dependencies
-
+## Project setup
 ```
-$ npm install
+npm install
 ```
 
-Start the dev server
-
+### Compiles and hot-reloads for development
 ```
-$ npm run dev
+npm run serve
 ```
 
+### Compiles and minifies for production
+```
+npm run build
+```
 ### mock data api
 
 json-server
@@ -31,6 +31,8 @@ json-server -c json-server/config.json json-server/db.json
 
 [filebrowser demo](https://demo.filebrowser.org/files/a/)
 
-### TODO:
-
--   修改为vue cli 避免微前端时的不可预知错误
+#### 修改记录
+-   src/router/index.js 去掉路由中登录检查
+-   auth.js 添加autologin方法
+-   main.js中start方法调用autologin
+-   使用vue cli构建项目
