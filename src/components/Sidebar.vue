@@ -30,7 +30,6 @@
                 <button
                     class="action"
                     @click="toSettings"
-                    v-if="canLogout"
                     :aria-label="$t('sidebar.settings')"
                     :title="$t('sidebar.settings')">
                     <i class="material-icons">settings_applications</i>
@@ -75,22 +74,18 @@
             {{ usage.used }} of {{ usage.total }} used
         </div>
 
-        <!--    <p class="credits">-->
-        <!--      <span>-->
-        <!--        <span v-if="disableExternal">File Browser</span>-->
-        <!--        <a-->
-        <!--          v-else-->
-        <!--          rel="noopener noreferrer"-->
-        <!--          target="_blank"-->
-        <!--          href="https://github.com/filebrowser/filebrowser"-->
-        <!--          >File Browser</a-->
-        <!--        >-->
-        <!--        <span> {{ version }}</span>-->
-        <!--      </span>-->
-        <!--      <span>-->
-        <!--        <a @click="help">{{ $t("sidebar.help") }}</a>-->
-        <!--      </span>-->
-        <!--    </p>-->
+        <p class="credits">
+            <span>
+                <span v-if="disableExternal">File Browser</span>
+                <a v-else rel="noopener noreferrer" target="_blank" href="https://github.com/filebrowser/filebrowser">
+                    File Browser
+                </a>
+                <span>{{ version }}</span>
+            </span>
+            <span>
+                <a @click="help">{{ $t("sidebar.help") }}</a>
+            </span>
+        </p>
     </nav>
 </template>
 

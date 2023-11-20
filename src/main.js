@@ -6,7 +6,7 @@ import router from "@/router";
 import i18n from "@/i18n";
 import Vue from "@/utils/vue";
 import { recaptcha, loginPage } from "@/utils/constants";
-import { autoLogin, login, validateLogin } from "@/utils/auth";
+import { login, validateLogin } from "@/utils/auth";
 import App from "@/App.vue";
 
 cssVars();
@@ -14,22 +14,38 @@ cssVars();
 sync(store, router);
 
 async function start() {
-    autoLogin();
-    // new Vue({
-    //     el: "#app",
-    //     store,
-    //     router,
-    //     i18n,
-    //     template: "<App/>",
-    //     components: { App }
-    // });
+    try {
+        if (loginPage) {
+            await validateLogin();
+        } else {
+            await login("", "", "");
+        }
+    } catch (e) {
+        console.log(e);
+    }
+
+    if (recaptcha) {
+        await new Promise((resolve) => {
+            const check = () => {
+                if (typeof window.grecaptcha === "undefined") {
+                    setTimeout(check, 100);
+                } else {
+                    resolve();
+                }
+            };
+
+            check();
+        });
+    }
 
     new Vue({
+        el: "#app",
         store,
         router,
         i18n,
-        render: (h) => h(App),
-      }).$mount("#app");
+        template: "<App/>",
+        components: { App }
+    });
 }
 
 start();

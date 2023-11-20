@@ -7,7 +7,26 @@ import upload from "./modules/upload";
 Vue.use(Vuex);
 
 const state = {
-    user: null,
+    user: {
+        id: 1,
+        locale: "zh-cn",
+        viewMode: "list",
+        singleClick: false,
+        perm: {
+            admin: false,
+            execute: true,
+            create: true,
+            rename: true,
+            modify: true,
+            delete: true,
+            share: true,
+            download: true
+        },
+        commands: [],
+        lockPassword: true,
+        hideDotfiles: false,
+        dateFormat: false
+    },
     req: {},
     oldReq: {},
     clipboard: {
