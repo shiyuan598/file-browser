@@ -12,7 +12,7 @@ const plugins = [
         targets: ["ie >= 11"],
         additionalLegacyPolyfills: ["regenerator-runtime/runtime"]
     }),
-    compression({ include: /\.js$/i, deleteOriginalAssets: true }),
+    // compression({ include: /\.js$/i, deleteOriginalAssets: true }),
     pluginRewriteAll() // fixes 404 error with paths containing dot in dev server
 ];
 
@@ -25,6 +25,26 @@ const resolve = {
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
+    return {
+        base: "",
+        plugins,
+        resolve,
+        server: {
+            proxy: {
+                "/api/command": {
+                    target: "ws://127.0.0.1:8080",
+                    ws: true
+                },
+                "/api": {
+                    target: "http://127.0.0.1:5000",
+                    changeOrigin: true,
+                    pathRewrite: {
+                        "^/api": "" // 如果请求地址中不需要 '/api' 前缀，可以将其重写为空
+                    }
+                }
+            }
+        }
+    };
     if (command === "serve") {
         return {
             plugins,

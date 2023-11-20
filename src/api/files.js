@@ -1,5 +1,4 @@
 import { createURL, fetchURL, removePrefix } from "./utils";
-import { baseURL } from "@/utils/constants";
 import store from "@/store";
 import { upload as postTus, useTus } from "./tus";
 
@@ -51,7 +50,7 @@ export async function put(url, content = "") {
 }
 
 export function download(format, ...files) {
-    let url = `${baseURL}/api/raw`;
+    let url = `/api/raw`;
 
     if (files.length === 1) {
         url += removePrefix(files[0]) + "?";
@@ -102,7 +101,7 @@ async function postResources(url, content = "", overwrite = false, onupload) {
 
     return new Promise((resolve, reject) => {
         let request = new XMLHttpRequest();
-        request.open("POST", `${baseURL}/api/resources${url}?override=${overwrite}`, true);
+        request.open("POST", `/api/resources${url}?override=${overwrite}`, true);
         request.setRequestHeader("X-Auth", store.state.jwt);
 
         if (typeof onupload === "function") {
