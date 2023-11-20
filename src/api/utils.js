@@ -1,7 +1,9 @@
 import store from "@/store";
 import { renew, logout } from "@/utils/auth";
-import { baseURL } from "@/utils/constants";
+// import { baseURL } from "@/utils/constants";
 import { encodePath } from "@/utils/url";
+
+const baseURL = import.meta.env.PROD ? "http://localhost:9002" : ""
 
 export async function fetchURL(url, opts, auth = true) {
     opts = opts || {};

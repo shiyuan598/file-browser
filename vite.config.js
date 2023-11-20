@@ -26,7 +26,7 @@ const resolve = {
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
     return {
-        base: "",
+        base: "/fbrowser",
         plugins,
         resolve,
         server: {
