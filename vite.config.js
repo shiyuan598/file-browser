@@ -5,6 +5,7 @@ import legacy from "@vitejs/plugin-legacy";
 import vue2 from "@vitejs/plugin-vue2";
 import { compression } from "vite-plugin-compression2";
 import pluginRewriteAll from "vite-plugin-rewrite-all";
+import dotenv from 'dotenv';
 
 const plugins = [
     vue2(),
@@ -27,6 +28,9 @@ const resolve = {
 export default defineConfig(({ command }) => {
     return {
         base: "/fbrowser",
+        define: {
+            'import.meta.env': JSON.stringify(dotenv.config({ path: process.env.NODE_ENV === 'production' ? '.env.production' : '.env.development' }).parsed)
+          },
         plugins,
         resolve,
         server: {
